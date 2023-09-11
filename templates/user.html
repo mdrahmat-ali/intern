@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+    {%block body_block%}
+        <h1>User Information Dashboard</h1><hr>
+        <table border="2">
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </thead>
+            {%for user in Users%}
+            <tr>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.city}}</td>
+            </tr>
+            {%endfor%}
+        </table><br><br>
+        <a href="/home" class="btn btn-primary">Home Page</a>
+
+    {%endblock%}
+    

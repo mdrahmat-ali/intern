@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+    {%block body_block%}
+        <div class="container">
+                <h1>Signup to see user</h1><hr>
+                <form method="post">
+                    {{form.as_p}}
+                    {%csrf_token%}
+                    <input type="submit" class="btn btn-primary" value="Signup">
+                </form>
+        </div>
+    {%endblock%}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+    {%block body_block%}
+        <h1>Work Information Dashboard</h1>
+        <table border="2">
+            <thead>
+                <th>Name</th>
+                <th>Work Type</th>
+            </thead>
+            {%for work in Works%}
+            <tr>
+                <td>{{work.name}}</td>
+                <td>{{work.work_type}}</td>
+            </tr>
+            {%endfor%}
+        </table><br><br>
+        <a href="/home" class="btn btn-primary">Home Page</a>
+    {%endblock%}
