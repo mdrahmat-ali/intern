@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+    {%block body_block%}
+        <h1>Client Information Update Form...</h1><hr>
+        {{form.as_p}}
+        <form method="post">
+            {%csrf_token%}
+            Client Name: <input type="text" name="name" value="{{client.name}}"><br><br>
+            Client Age: <input type="text" name="age" value="{{client.age}}"><br><br>
+            Client City: <input type="text" name="city" value="{{client.city}}"><br><br>
+            <input type="submit" class="btn btn-primary" value="Update Record">
+        </form>
+    {%endblock%}

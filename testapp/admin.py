@@ -1,7 +1,7 @@
 from django.contrib import admin
-from testapp.models import User,Artist,Work
+from testapp.models import Client,Artist,Work
 
-class UserAdmin(admin.ModelAdmin):
+class ClientAdmin(admin.ModelAdmin):
     list_display=['name','age','city']
 
 class ArtistAdmin(admin.ModelAdmin):
@@ -10,6 +10,6 @@ class ArtistAdmin(admin.ModelAdmin):
 class WorkAdmin(admin.ModelAdmin):
     list_display=['name','work_type']
 
-admin.site.register(User,UserAdmin)
+admin.site.register(Client,ClientAdmin)
 admin.site.register(Artist,ArtistAdmin)
 admin.site.register(Work,WorkAdmin)

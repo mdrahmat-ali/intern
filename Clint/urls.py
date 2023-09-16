@@ -20,10 +20,13 @@ from testapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', views.homeview),
-    path('user', views.userview),
     path('accounts/', include('django.contrib.auth.urls')),
     path('art', views.artistview),
     path('work', views.workview),
     path('logout', views.thankview),
     path('register', views.registerview),
+    path('create', views.createview),
+    path('retrive',views.retriveview),
+    path('delete/<int:id>',views.delete_view),
+    path('update/<int:id>', views.update_view),
 ]
